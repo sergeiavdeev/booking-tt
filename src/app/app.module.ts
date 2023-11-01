@@ -8,10 +8,12 @@ import {RoutingModule} from "./routing.module";
 import {appReducer, metaReducers} from "./store/reducers/router.reducer";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
