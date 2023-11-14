@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  selector: 'nav-component',
+  templateUrl: './nav.component.html'
 })
 export class NavComponent {
-
+  title = 'web-app';
 }
