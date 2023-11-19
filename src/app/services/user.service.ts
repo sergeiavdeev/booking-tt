@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, map } from "rxjs";
 import { IUserState } from "../store/state/user.state";
@@ -12,5 +12,11 @@ export class UserService {
         
         return this.http.get<IUserState>("/user/info")
         .pipe(map((info) => info));
+    }
+
+    logout() : Observable<HttpResponse<any>> {
+
+        return this.http.post<HttpResponse<any>>("/logout", "")
+        .pipe(map((response) => response));
     }
 }

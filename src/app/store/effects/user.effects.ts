@@ -19,4 +19,14 @@ export class UserEffects {
             )
         )
     )
+
+    logout$ = createEffect(() => 
+        this.actions$.pipe(
+            ofType(EUserActions.Logout),
+            mergeMap(() => this.service.logout()
+                .pipe(
+                    map(() => ({type: EUserActions.Clear}))
+                ))
+        )
+    )
 }

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { Action } from '@ngrx/store';
-import { EMPTY, catchError, map, mergeMap, of } from 'rxjs';
+import { map, mergeMap, of } from 'rxjs';
 import { DeviationService } from 'src/app/services/deviation.service';
 // import { EMPTY } from 'rxjs';
 // import { map, mergeMap, catchError } from 'rxjs/operators';

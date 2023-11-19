@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import {HttpClient, HttpErrorResponse, HttpResponse} from "@angular/common/http";
-import { Observable, catchError, map, throwError } from "rxjs";
+import {HttpClient, HttpResponse} from "@angular/common/http";
+import { Observable, map } from "rxjs";
 
 const dev = {
     "date": "2023-12-01",

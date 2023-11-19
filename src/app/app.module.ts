@@ -14,11 +14,19 @@ import { DeviationEffects } from './store/effects/deviation.effects';
 import { RedirectInterceptor } from './services/redirect.interceptor';
 import { HttpErrorHandler } from './services/error.handler';
 import { UserEffects } from './store/effects/user.effects';
+import { TournamentComponent } from './components/tournament/tournament.component';
+import { MainComponent } from './components/main/main.component';
+import { TrainingComponent } from './components/training/training.component';
+import { RentComponent } from './components/rent/rent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    TournamentComponent,
+    MainComponent,
+    TrainingComponent,
+    RentComponent
   ],
   //schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

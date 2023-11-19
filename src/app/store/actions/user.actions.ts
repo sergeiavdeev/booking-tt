@@ -7,7 +7,9 @@ export enum EUserActions {
     GetInfo = "[User] get info",
     GetInfoOk = "[User] get info succes",
     GetInfoError = "[User] get info error",
-    Clear = "[User] clear"
+    Clear = "[User] clear",
+    Logout = "[User] logout",
+    LogoutOk = "[User] logout success"
 }
 
 export class GetInfo implements Action {
@@ -35,4 +37,16 @@ export class Clear implements Action {
     constructor() {}
 }
 
-export type UserActions = GetInfo | GetInfoOk | GetInfoError | Clear;
+export class Logout implements Action {
+    public readonly type = EUserActions.Logout;
+
+    constructor() {}
+}
+
+export class LogoutOk implements Action {
+    public readonly type = EUserActions.LogoutOk;
+
+    constructor() {}
+}
+
+export type UserActions = GetInfo | GetInfoOk | GetInfoError | Clear | Logout | LogoutOk;
