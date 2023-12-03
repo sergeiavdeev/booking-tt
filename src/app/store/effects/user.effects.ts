@@ -9,7 +9,7 @@ import { IUserState } from "../state/user.state";
 export class UserEffects {
     constructor(private actions$: Actions, private service: UserService) { }
 
-    getInfo$ = createEffect(() => 
+    getInfo$ = createEffect(() =>  
         this.actions$.pipe(
             ofType(EUserActions.GetInfo),
             mergeMap(() => this.service.getUserInfo()

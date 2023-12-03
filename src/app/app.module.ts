@@ -5,7 +5,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { RoutingModule} from "./routing.module";
-import { appReducer, metaReducers} from "./store/reducers/router.reducer";
+import { appReducer, metaReducers} from "./store/reducers/app.reducer";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 //import { ServiceWorkerModule } from '@angular/service-worker';
 import { NavComponent } from './components/nav/nav.component';
@@ -18,6 +18,7 @@ import { TournamentComponent } from './components/tournament/tournament.componen
 import { MainComponent } from './components/main/main.component';
 import { TrainingComponent } from './components/training/training.component';
 import { RentComponent } from './components/rent/rent.component';
+import { StorageEffects } from './store/effects/storage.effects';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { RentComponent } from './components/rent/rent.component';
   imports: [
     BrowserModule,
     StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([DeviationEffects, UserEffects]),
+    EffectsModule.forRoot([DeviationEffects, UserEffects, StorageEffects]),
     StoreRouterConnectingModule.forRoot(),
     RoutingModule,
     HttpClientModule,

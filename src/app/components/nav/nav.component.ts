@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { EUserActions } from 'src/app/store/actions/user.actions';
 import { selectUser } from 'src/app/store/selectors/user.selector';
 import { IAppState } from 'src/app/store/state/app.state';
+import { env } from 'src/environments/environments';
 
 @Component({
   selector: 'nav-component',
@@ -17,12 +18,12 @@ export class NavComponent {
 
   login(): boolean {
     //this.store.dispatch({type: EUserActions.GetInfo});
-    window.location.href = "/oauth2/authorization/keycloak";
+    window.location.href = env.apiServer + "/oauth2/authorization/keycloak";
     return false;
   }
 
   logout(): boolean {
-    window.location.href = "/logout"
+    window.location.href = env.apiServer + "/logout"
     //this.store.dispatch({type: EUserActions.Logout})
     return false;
   }

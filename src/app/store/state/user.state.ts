@@ -1,5 +1,5 @@
 export interface IUserState {
-    uuid: String
+    uuid: String;
     firstName: String;
     lastName: String;
     roles: String[];

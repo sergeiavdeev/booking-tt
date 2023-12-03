@@ -1,3 +1,5 @@
 export const env = {
-    production: true
+    production: true,
+    apiServer: "",
+    apiVersion: "/api/v1"
 } 
