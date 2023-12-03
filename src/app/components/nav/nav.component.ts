@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { EUserActions } from 'src/app/store/actions/user.actions';
 import { selectUser } from 'src/app/store/selectors/user.selector';
 import { IAppState } from 'src/app/store/state/app.state';
 import { env } from 'src/environments/environments';
