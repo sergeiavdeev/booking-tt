@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../cloud/gateway/src/main/resources/static",
+            "baseHref": "/ttc-tops/",             
+            "outputPath": "../cloud/static-content/src/main/resources/static/ttc-tops",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
